@@ -5,23 +5,23 @@ module.exports = function (req, res) {
             index.homePage(req,res)
             //deriva en el controlador del HOME
             break;
-        case "./en-cartelera":
+        case "/en-cartelera":
             index.enCartelera(req,res)
             //deriva en el controlador de cartelera
             break;
-        case "./contacto":
+        case "/contacto":
             index.contacto(req,res)
             //deriva en el controlador de contacto
             break;
-        case "./mas-votadas":
+        case "/mas-votadas":
             index.masVotadas(req,res)
             //deriva en el controlador de masVotadas
             break;
-        case "preguntas-frecuentes":
+        case "/preguntas-frecuentes":
             index.preguntasFrecuentes(req,res)
             //deriva en el controlador de PreguntasFrecuentes
             break;
-        case "sucursales":
+        case "/sucursales":
             index.sucursales(req,res)
             //deriva en el controlador de cartelera
             break;

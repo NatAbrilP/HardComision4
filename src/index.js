@@ -14,6 +14,7 @@ module.exports = {
 
     },
     enCartelera: function (req, res) {
+
     
     },
     masVotadas: function (req, res) {
