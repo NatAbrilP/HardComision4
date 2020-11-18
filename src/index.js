@@ -14,6 +14,8 @@ module.exports = {
 
     },
     enCartelera: function (req, res) {
+        res.write("aca va algo")
+        res.end()
 
     
     },
