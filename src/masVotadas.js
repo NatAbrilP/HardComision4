@@ -5,8 +5,8 @@ module.exports = {
     leerJSON: function(){
         return JSON.parse(fs.readFileSync(this.bd,"utf-8"));
     },
-    peliTitulos:function(){
-        let voteFilter=this.leerJSON().movies.filter(function(peli){
+    titulos:function(){
+        let voteFilter = this.leerJSON().movies.filter(function(peli){
             return peli.vote_average>=7
         })
         return voteFilter.sort(function(a,b){
@@ -19,13 +19,13 @@ module.exports = {
         }
         });
     },
-    totalPelis:function(){
+    pelisFiltradas:function(){
         let archivo=this.leerJSON().movies.filter(function(peli){
             return peli.vote_average>=7
         })
             return archivo.length;
     },
-    peliPromedio:function(){
+    votoPromedio:function(){
         let voteFilter=this.leerJSON().movies.filter(function(peli){
             return peli.vote_average>=7
         });
@@ -35,6 +35,6 @@ module.exports = {
         let puntajeVotes=masVotes.reduce(function(number,acum){
             return acum+number
         });
-        return (puntajeVotes/masVotes.length).toFixed(2);
+        return (puntajeVotes/masVotes.length).toFixed();
     },
 }
