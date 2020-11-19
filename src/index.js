@@ -1,6 +1,7 @@
 
 let homePage = require("./homePage");
 let enCartelera = require("./enCartelera")
+let contacto = require("./contacto")
 
 
 
@@ -53,6 +54,11 @@ module.exports = {
 
     },
     contacto: function (req, res) {
+        res.write("============================================================"+"\n")
+        res.write(contacto.titulo+"\n")
+        res.write("============================================================"+ "\n\n")
+        res.write(contacto.contenido)
+        res.end()
 
     },
 
