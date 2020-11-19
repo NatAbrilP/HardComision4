@@ -62,7 +62,7 @@ module.exports = {
         res.write(' sucursales. ¡Vení a visitarlas! ' + "\n")
         res.write("\n" + '  ↓ Las podes encontrar en estas direcciones ↓  ' + '\n\n')
         sucursales.leerJSON().theaters.forEach(sucursal => {
-            res.write('       ' + '►' +sucursal.name.toUpperCase() + "\n\n")
+            res.write('       ' + '►' +sucursal.name.toUpperCase() + "\n"+ '       '+sucursal.address+ "\n\n")
         });
         res.end()
     },
