@@ -1,23 +1,23 @@
 {
     "total_faqs": 5,
     "faqs": [{
-            "faq_title": "¿A partir de qué edad los niños deben pagar entrada?",
+            "faq_title": "⚪¿A partir de qué edad los niños deben pagar entrada?",
             "faq_answer": "Los niños pagan entrada a partir de los 3 años.Menores de 3 años no abonan entrada mientras no ocupen una butaca adicional.Menores de 4 años tienen prohibido el ingreso a las salas 4 D y Platinum."
         },
         {
-            "faq_title": "¿Cuáles son las condiciones de compra de entradas?",
+            "faq_title": "🟡¿Cuáles son las condiciones de compra de entradas?",
             "faq_answer": "La compra de entradas de cine de DH MOVIES: a través de este sitio web y/o máquinas expendedoras de entradas (ATM), implica la aceptación por parte del cliente de todos y cada uno de los siguientes términos y condiciones."
         },
         {
-            "faq_title": "¿Cuáles son las condiciones de compra de entradas para las salas 4D?",
+            "faq_title": "🟠¿Cuáles son las condiciones de compra de entradas para las salas 4D?",
             "faq_answer": "El ingreso a una sala 4D implica la aceptación de las siguientes normas de seguridad: El espectador ingresa bajo su propio riesgo. Cines Multiplex y LUMMA SRL no asumen responsabilidad por cualquier daño o lesión ocasionada por la participación en salas equipadas con 4D."
         },
         {
-            "faq_title": "Me equivoqué al comprar la entrada ¿Puedo cambiarla?",
+            "faq_title": "🔴Me equivoqué al comprar la entrada ¿Puedo cambiarla?",
             "faq_answer": "¡Si, claro! Si te equivocaste en algún paso del proceso de compra online, el día, complejo o en la elección de la película, y necesitas pedir el cambio o la anulación de tus entradas, deberás realizar el reembolso en https: //digitalhouse.dhmovies.com.ar/refund completando los datos de tu compra (email, dni y código de retiro), y si las entradas aún no fueron impresas y se encuentran dentro del plazo de las 2 horas antes del inicio la función, el sistema te informará que las entradas son válidas para realizar el reembolso. Luego deberás volver a comprar para la función deseada."
         },
         {
-            "faq_title": "¿Cuáles son los medios de pagos disponibles?",
+            "faq_title": "🟣¿Cuáles son los medios de pagos disponibles?",
             "faq_answer": "Los medios de pago online son tarjeta de débito y crédito.Podes consultar todos los medios de pago online disponibles desde la web de MercadoPago.En boletería podes también pagar en efectivo."
         }
     ]

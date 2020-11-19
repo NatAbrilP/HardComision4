@@ -11,5 +11,8 @@ module.exports={
     },
     nombreSucursales : function(){
       return(this.leerJSON().name)
+    },
+    direccion : function(){
+      return(this.leerJSON().address)
     }
 }
