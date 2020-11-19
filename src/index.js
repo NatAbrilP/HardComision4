@@ -1,6 +1,7 @@
 
 let homePage = require("./homePage");
 let enCartelera = require("./enCartelera")
+let preguntasFrecuentes = require("./preguntasFrecuentes");
 
 
 
@@ -33,7 +34,13 @@ module.exports = {
 
    },
    preguntasFrecuentes: function (req, res) {
-
+        res.write("Cantidad de preguntas: " + preguntasFrecuentes.cantidad() + "\n\n")
+    preguntasFrecuentes.leerJSON().faqs.forEach(preguntas => {
+        res.write(preguntas.faq_title+"\n")
+        res.write(preguntas.faq_answer+"\n")
+        res.write("\n\n\n")
+    }); 
+    res.end();
    },
    sucursales: function (req, res) {
 
