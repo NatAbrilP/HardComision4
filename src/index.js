@@ -61,9 +61,11 @@ module.exports = {
 
     },
     sucursales: function (req, res) {
-        res.write('Nuestra cantidad de sucursales son: '  + sucursales.totalSucursales()+ '\n\n')
+        res.write('Tenemos '  + sucursales.totalSucursales())
+        res.write(' sucursales. ¡Vení a visitarlas!' + "\n")
+        res.write("\n" + '  ↓ Las podes encontrar en estas direcciones! ↓  ' + '\n\n')
         sucursales.leerJSON().theaters.forEach(sucursal => {
-            res.write(sucursal.name.toUpperCase() + "\n\n")
+            res.write('       ' + '►' +sucursal.name.toUpperCase() + "\n\n")
         });
         res.end()
     },
