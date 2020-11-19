@@ -6,7 +6,10 @@ module.exports={
       let theaters = JSON.parse(theatersJSON) */
     return teathers = JSON.parse( fs.readFileSync(this.bd,"utf-8"))
     },
-     theaters:function(){
+     totalSucursales : function(){
       return (this.leerJSON().total_theaters)
+    },
+    nombreSucursales : function(){
+      return(this.leerJSON().name)
     }
 }

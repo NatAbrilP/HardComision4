@@ -3,6 +3,7 @@ let homePage = require("./homePage");
 let enCartelera = require("./enCartelera")
 let contacto = require("./contacto")
 let preguntasFrecuentes = require("./preguntasFrecuentes")
+let sucursales = require("./sucursales")
 
 
 
@@ -60,7 +61,11 @@ module.exports = {
 
     },
     sucursales: function (req, res) {
-
+        res.write('Nuestra cantidad de sucursales son: '  + sucursales.totalSucursales()+ '\n\n')
+        sucursales.leerJSON().theaters.forEach(sucursal => {
+            res.write(sucursal.name.toUpperCase() + "\n\n")
+        });
+        res.end()
     },
     contacto: function (req, res) {
         res.write("============================================================"+"\n")
