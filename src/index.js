@@ -34,6 +34,7 @@ module.exports = {
 
    },
    preguntasFrecuentes: function (req, res) {
+        res.write("PREGUNTAS FRECUENTES\n\n\n")
         res.write("Cantidad de preguntas: " + preguntasFrecuentes.cantidad() + "\n\n")
     preguntasFrecuentes.leerJSON().faqs.forEach(preguntas => {
         res.write(preguntas.faq_title+"\n")
