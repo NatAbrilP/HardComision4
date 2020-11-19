@@ -15,7 +15,8 @@ module.exports = {
         let listaDeTitulos=[]
         let listaCompleta=this.leerJSON();
         listaCompleta.movies.forEach(function(movie){
-           return listaDeTitulos.push('\n->'+movie.title);
+           return listaDeTitulos.push('\n-'+movie.title);
+           
         })
         listaDeTitulos.sort();
         
