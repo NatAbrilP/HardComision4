@@ -1,37 +1,40 @@
 const fs = require("fs");
-const { leerJSON } = require("./homePage");
-
 
 module.exports = {
-    leerJSON : function(){
-        return JSON.parse(fs.readFileSync('./data/movies.json', 'utf-8'))
-},
-mostarTitulos: function(){
-    let listaDeTitulos=[]
-    let listaCompleta=this.leerJSON();
-    listaCompleta.movies.forEach(function(movie){
-       return listaDeTitulos.push('\n-'+movie.title);
-       
-    })
-    listaDeTitulos.sort();
-    
-    return listaDeTitulos.join('');
-},
-titulosFiltrados: function(){
-        let pelis = this.leerJSON().movies
-        let pelisFiltradas = pelis.filter(function(pelicula){
-             return pelicula.vote_average >=7
+    bd: "./data/movies.json",
+    leerJSON: function(){
+        return JSON.parse(fs.readFileSync(this.bd,"utf-8"));
+    },
+    peliTitulos:function(){
+        let voteFilter=this.leerJSON().movies.filter(function(peli){
+            return peli.vote_average>=7
         })
-        
-        return pelisFiltradas
-     },
-
-    promedio : function(){
-        let votadas = 0
-        let votosFiltrados = this.leerJSON().movies
-        votosFiltrados.forEach(function(peli){
-            votadas = ((votadas + peli.vote_average) / votosFiltrados.length  )
+        return voteFilter.sort(function(a,b){
+        if (a.vote_average>b.vote_average) {
+            return -1
+        }else if (a.vote_average<b.vote_average) {
+            return 1
+        } else {
+            return 0
+        }
+        });
+    },
+    totalPelis:function(){
+        let archivo=this.leerJSON().movies.filter(function(peli){
+            return peli.vote_average>=7
         })
-        return votadas
-    }
+            return archivo.length;
+    },
+    peliPromedio:function(){
+        let voteFilter=this.leerJSON().movies.filter(function(peli){
+            return peli.vote_average>=7
+        });
+        let masVotes=voteFilter.map(function(peli){
+            return peli.vote_average
+        })
+        let puntajeVotes=masVotes.reduce(function(number,acum){
+            return acum+number
+        });
+        return (puntajeVotes/masVotes.length).toFixed(2);
+    },
 }

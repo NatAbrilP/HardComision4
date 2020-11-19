@@ -38,12 +38,12 @@ module.exports = {
         res.end();
 
     },
-    masVotadas: function (req, res) {
-        res.write(`El promedio de estas peliculas es : ${masVotadas.promedio()} \n\n`)
-        res.write('Listado de peliculas:\n\n');
-        res.write(`${masVotadas.titulosFiltrados()}.`)
-        res.write('--------------------------------------------')
-        res.write('\n\n')
+    masVotadas:function(req,res){
+        res.write('////////MAS VOTADAS\n-----------------------------------------\n\n');
+        res.write(`////////TOTAL DE PELICULAS: ${masVotadas.totalPelis()}\n\n////////RATING PROMEDIO: ${masVotadas.peliPromedio()}\n\n\n`);
+        masVotadas.peliTitulos().forEach(pelicula=>{
+            res.write(`Titulo: ${pelicula.title}\nRating: ${pelicula.vote_average}\nReseña: ${pelicula.overview}\n\n\n\n`);
+        });
         res.end()
 
     },
@@ -76,5 +76,4 @@ module.exports = {
 
     },
 
-
-}
+    }
