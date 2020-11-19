@@ -4,7 +4,7 @@ let enCartelera = require("./enCartelera")
 let contacto = require("./contacto")
 let preguntasFrecuentes = require("./preguntasFrecuentes")
 let sucursales = require("./sucursales")
-
+let masVotadas = require("./masVotadas")
 
 
 const totalPelis = require("./enCartelera");
@@ -39,7 +39,11 @@ module.exports = {
 
     },
     masVotadas: function (req, res) {
-        res.write("aca va algo de los votos")
+        res.write(`El promedio de estas peliculas es : ${masVotadas.promedio()} \n\n`)
+        res.write('Listado de peliculas:\n\n');
+        res.write(`${masVotadas.titulosFiltrados()}.`)
+        res.write('--------------------------------------------')
+        res.write('\n\n')
         res.end()
 
     },
