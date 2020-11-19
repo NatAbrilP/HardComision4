@@ -11,14 +11,15 @@ module.exports = {
     titulos : function(){
         return this.leerJSON().title
     },
-    pelisOrden : function(){
-        let orden = []
-        this.leerJSON().movies.forEach((peli) => {
-            orden.push(peli.title);
+    mostarTitulos: function(){
+        let listaDeTitulos=[]
+        let listaCompleta=this.leerJSON();
+        listaCompleta.movies.forEach(function(movie){
+           return listaDeTitulos.push('\n->'+movie.title);
         })
-        return orden.sort(function(a,b){
-            return a.toLowerCase().loceleCompare(b.toLowerCase());
-        });
+        listaDeTitulos.sort();
+        
+        return listaDeTitulos.join('');
     }
-    
-	}
+
+    }
