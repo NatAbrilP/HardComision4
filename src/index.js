@@ -39,8 +39,8 @@ module.exports = {
 
     },
     masVotadas:function(req,res){
-        res.write('////////MAS VOTADAS\n-----------------------------------------\n\n');
-        res.write(`////////TOTAL DE PELICULAS: ${masVotadas.totalPelis()}\n\n////////RATING PROMEDIO: ${masVotadas.peliPromedio()}\n\n\n`);
+        res.write('MAS VOTADAS👍\n-----------------------------------------\n\n');
+        res.write(`🎞️TOTAL DE PELICULAS🎬: ${masVotadas.totalPelis()}\n\n 👉RATING PROMEDIO ⤳ ${masVotadas.peliPromedio()}👈 \n\n\n`);
         masVotadas.peliTitulos().forEach(pelicula=>{
             res.write(`Titulo: ${pelicula.title}\nRating: ${pelicula.vote_average}\nReseña: ${pelicula.overview}\n\n\n\n`);
         });
