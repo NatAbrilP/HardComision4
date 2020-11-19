@@ -1,17 +1,16 @@
-const fs=require("fs")
-const { bd } = require("./homePage")
+const fs = require("fs")
+const { bd, leerJSON } = require("./homePage")
 
-module.exports={
-    bd: "./data/movies.json",
-    leerJSON :function(){
-     
-    return movies = JSON.parse( fs.readFileSync(this.bd,"utf-8"))
-    
-    },
-    totalPelis : function(){
-      return bd.total_movies
-      
-},
+module.exports = {
+  bd: "./data/movies.json",
+  titulo: "En cartelera",
+  leerJSON: function () {
 
+    return JSON.parse(fs.readFileSync(this.bd, "utf-8"))
+
+  },
+   
     
+  
+  
 } 
